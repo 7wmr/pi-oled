@@ -54,7 +54,7 @@ while True:
 
     # Indicator box.
     if indicator_box == True:
-        draw.rectangle((left_indent, top_indent, (left_indent + 5), (top_indent + 5)), outline=1, fill=1)
+        draw.rectangle(((left_indent + 1), (top_indent + 1), (left_indent + 2), (top_indent + 2)), outline=1, fill=1)
         indicator_box = False
     else:
         indicator_box = True
