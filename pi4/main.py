@@ -34,13 +34,10 @@ image = Image.new('1', (width, height))
 # Get drawing object to draw on image.
 draw = ImageDraw.Draw(image)
 
-
 left_indent = 10
 top_indent = 0
 box_width = 107
 box_height = 62
-
-
 
 # Fonts.
 font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 14)
@@ -76,4 +73,4 @@ while True:
     # Display image.
     disp.image(image)
     disp.display()
-    time.sleep(1000)
+    time.sleep(.1)
