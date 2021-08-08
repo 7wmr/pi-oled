@@ -56,9 +56,11 @@ while True:
 
     host_name = socket.gethostname()
     mem_usage = str(psutil.virtual_memory()[2]) + '%'
+    cpu_usage = str(psutil.cpu_percent(4)) + '%'
 
     draw.text((15, 12), host_name,  font=font, fill=255)
-    draw.text((15, 42), mem_usage, font=font, fill=255) # 15, 42
+    draw.text((15, 42), mem_usage, font=font, fill=255) 
+    draw.text((68, 42), cpu_usage, font=font, fill=255) 
 
     # Display image.
     disp.image(image)
