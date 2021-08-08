@@ -45,12 +45,20 @@ box_height = 62
 # Fonts.
 font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 14)
 
+indicator_box = True
+
 while True:
         
     # Draw a black filled box to clear the image.
     draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill=0)
-    # draw.hline(left_indent, (31 + top_indent), box_width, 1)
-    # draw.vline((53 + left_indent), (31 + top_indent), 31, 1)
+
+    # Indicator box.
+    if indicator_box == True:
+        draw.rectangle((left_indent, top_indent, (left_indent + 5), (top_indent + 5)), outline=1, fill=1)
+        indicator_box = False
+    else:
+        indicator_box = True
+
     draw.line((left_indent, (31 + top_indent), box_width, (31 + top_indent)), fill=255)
     draw.line(((53 + left_indent), (31 + top_indent), (53 + left_indent), box_height), fill=255)
 
