@@ -39,6 +39,8 @@ top_indent = 0
 box_width = 107
 box_height = 62
 
+
+
 # Fonts.
 font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 14)
 
@@ -51,8 +53,11 @@ while True:
     draw.line((left_indent, (31 + top_indent), box_width, (31 + top_indent)), fill=255)
     draw.line(((53 + left_indent), (31 + top_indent), (53 + left_indent), box_height), fill=255)
 
-    draw.text((15, 12), socket.gethostname(),  font=font, fill=255)
-    draw.text((25, 42), '150', font=font, fill=255) # 15, 42
+    host_name = socket.gethostname()
+    ip_address = socket.gethostbyname(host_name)
+
+    draw.text((15, 12), host_name,  font=font, fill=255)
+    draw.text((25, 42), ip_address, font=font, fill=255) # 15, 42
 
     # Display image.
     disp.image(image)
