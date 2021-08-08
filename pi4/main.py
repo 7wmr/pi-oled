@@ -58,7 +58,7 @@ while True:
     mem_usage = str(psutil.virtual_memory()[2]) + '%'
 
     draw.text((15, 12), host_name,  font=font, fill=255)
-    draw.text((25, 42), mem_usage, font=font, fill=255) # 15, 42
+    draw.text((15, 42), mem_usage, font=font, fill=255) # 15, 42
 
     # Display image.
     disp.image(image)

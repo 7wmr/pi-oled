@@ -13,6 +13,13 @@ sudo apt install -y i2c-tools
 sudo apt install -y python-smbus
 ```
 
+```bash
+sudo pip3 install psutil
+```
+
+```bash
+sudo python3 pi4/main.py
+```
 
 https://www.raspberrypi-spy.co.uk/2018/04/i2c-oled-display-module-with-raspberry-pi/
 https://www.dafont.com/search.php?text=k3s-master-1
