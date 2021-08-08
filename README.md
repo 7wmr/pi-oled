@@ -15,3 +15,4 @@ sudo apt install -y python-smbus
 
 
 https://www.raspberrypi-spy.co.uk/2018/04/i2c-oled-display-module-with-raspberry-pi/
+https://www.dafont.com/search.php?text=k3s-master-1

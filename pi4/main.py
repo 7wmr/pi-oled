@@ -41,6 +41,12 @@ box_height = 62
 
 # Draw a black filled box to clear the image.
 draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill=0)
+# draw.hline(left_indent, (31 + top_indent), box_width, 1)
+# draw.vline((53 + left_indent), (31 + top_indent), 31, 1)
+
+# Fonts.
+font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 8)
+draw.text((10, 10), 'k3s-master-1',  font=font, fill=255)
 
 # Display image.
 disp.image(image)
