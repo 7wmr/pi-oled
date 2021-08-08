@@ -47,7 +47,7 @@ draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill
 # Fonts.
 font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 14)
 
-draw.text((15, 12), socket.gethostname(),  font=font, fill=255)
+draw.text((15, 12), str(socket.gethostname()),  font=font, fill=255)
 draw.text('150', 25, 42) # 15, 42
 
 # Display image.
