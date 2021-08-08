@@ -60,7 +60,7 @@ while True:
         indicator_box = True
 
     draw.line((left_indent, (31 + top_indent), box_width, (31 + top_indent)), fill=255)
-    draw.line(((53 + left_indent), (31 + top_indent), (53 + left_indent), box_height), fill=255)
+    draw.line(((50 + left_indent), (31 + top_indent), (50 + left_indent), box_height), fill=255)
 
     host_name = socket.gethostname()
     mem_usage = str(psutil.virtual_memory()[2]) + '%'
