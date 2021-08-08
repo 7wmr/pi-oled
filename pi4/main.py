@@ -1,5 +1,6 @@
 import time
 import socket
+import psutil
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
 
@@ -54,10 +55,10 @@ while True:
     draw.line(((53 + left_indent), (31 + top_indent), (53 + left_indent), box_height), fill=255)
 
     host_name = socket.gethostname()
-    ip_address = socket.gethostbyname(host_name)
+    mem_usage = str(psutil.virtual_memory()[2]) + '%'
 
     draw.text((15, 12), host_name,  font=font, fill=255)
-    draw.text((25, 42), ip_address, font=font, fill=255) # 15, 42
+    draw.text((25, 42), mem_usage, font=font, fill=255) # 15, 42
 
     # Display image.
     disp.image(image)
