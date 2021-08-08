@@ -40,7 +40,7 @@ box_width = 107
 box_height = 62
 
 # Draw a black filled box to clear the image.
-draw.rectangle((left_indent, top_indent, box_width, box_height), outline=0, fill=0)
+draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill=0)
 
 # Display image.
 disp.image(image)
