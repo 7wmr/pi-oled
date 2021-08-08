@@ -1,5 +1,5 @@
 import time
-import os
+import socket
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
 
@@ -46,8 +46,8 @@ draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill
 
 # Fonts.
 font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 14)
-hostname = os.system('hostname')
-draw.text((10, 10), hostname,  font=font, fill=255)
+
+draw.text((10, 10), socket.gethostname(),  font=font, fill=255)
 
 # Display image.
 disp.image(image)
