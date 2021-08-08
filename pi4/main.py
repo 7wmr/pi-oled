@@ -1,5 +1,5 @@
 import time
-
+import os
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
 
@@ -45,8 +45,9 @@ draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill
 # draw.vline((53 + left_indent), (31 + top_indent), 31, 1)
 
 # Fonts.
-font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 12)
-draw.text((10, 10), 'k3s-master-1',  font=font, fill=255)
+font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 14)
+hostname = os.system('hostname')
+draw.text((10, 10), hostname,  font=font, fill=255)
 
 # Display image.
 disp.image(image)
