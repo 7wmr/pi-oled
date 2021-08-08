@@ -49,6 +49,7 @@ while True:
     # draw.hline(left_indent, (31 + top_indent), box_width, 1)
     # draw.vline((53 + left_indent), (31 + top_indent), 31, 1)
     draw.line((left_indent, (31 + top_indent), box_width, (31 + top_indent)), fill=255)
+    draw.line(((53 + left_indent), 31, (53 + left_indent), (31 + top_indent)), fill=255)
 
     draw.text((15, 12), socket.gethostname(),  font=font, fill=255)
     draw.text((25, 42), '150', font=font, fill=255) # 15, 42
