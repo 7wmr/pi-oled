@@ -50,11 +50,14 @@ indicator_box = True
 while True:
         
     # Draw a black filled box to clear the image.
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+
+    # Draw box.
     draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill=0)
 
     # Indicator box.
     if indicator_box == True:
-        draw.rectangle(((left_indent + 1), (top_indent + 1), (left_indent + 2), (top_indent + 2)), outline=1, fill=1)
+        draw.rectangle(((left_indent + 1), (top_indent + 1), (left_indent + 3), (top_indent + 3)), outline=1, fill=1)
         indicator_box = False
     else:
         indicator_box = True
