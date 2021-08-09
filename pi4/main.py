@@ -68,7 +68,7 @@ while True:
 
     draw.text((15, 12), host_name,  font=font, fill=255)
     draw.text((15, 42), mem_usage, font=font, fill=255) 
-    draw.text((68, 42), cpu_usage, font=font, fill=255) 
+    draw.text((66, 42), cpu_usage, font=font, fill=255) 
 
     # Display image.
     disp.image(image)
