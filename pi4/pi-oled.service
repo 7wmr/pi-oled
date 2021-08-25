@@ -1,0 +1,9 @@
+[Unit]
+Description=Pi OLED
+
+[Service]
+ExecStart=/usr/bin/python3 /repos/pi-oled/pi4/main.py
+
+[Install]
+WantedBy=multi-user.target
+
