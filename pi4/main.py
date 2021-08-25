@@ -40,7 +40,7 @@ box_width = 107
 box_height = 62
 
 # Fonts.
-font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 14)
+font = ImageFont.truetype('/repos/pi-oled/fonts/roboto/Roboto-Light.ttf', 14)
 
 indicator_box = True
 
