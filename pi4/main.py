@@ -75,7 +75,7 @@ while True:
     # Display image.
     disp.image(image)
     disp.display()
-    time.sleep(2000)
+    time.sleep(2)
 
     # PAGE 2
 
@@ -99,5 +99,5 @@ while True:
      # Display image.
     disp.image(image)
     disp.display()
-    time.sleep(.1)
+    time.sleep(2)
 
