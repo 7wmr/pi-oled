@@ -75,7 +75,7 @@ while True:
     # Display image.
     disp.image(image)
     disp.display()
-    time.sleep(.1)
+    time.sleep(2000)
 
     # PAGE 2
 
@@ -94,7 +94,7 @@ while True:
     degrees_c = int(temperature) / 1000
     degrees_c = str(round(degrees_c, 2)) + " ºC"
     
-    draw.text((15, 12), degrees_c,  font=font, fill=255)
+    draw.text((30, 12), degrees_c,  font=font, fill=255)
 
      # Display image.
     disp.image(image)
