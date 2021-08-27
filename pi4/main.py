@@ -70,7 +70,7 @@ while True:
     # Display Memory
     mem_usage = str(psutil.virtual_memory()[2]) + '%'
 
-    display_box('Memory', mem_usage)
+    display_box('MEM', mem_usage)
 
     # Display CPU
     cpu_usage = str(psutil.cpu_percent(4)) + '%'
@@ -85,6 +85,6 @@ while True:
     degrees_c = int(temperature) / 1000
     degrees_c = str(round(degrees_c, 2)) + " ºC"
 
-    display_box('Temp', cpu_usage)
+    display_box('TEMP', degrees_c)
 
 
