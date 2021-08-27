@@ -51,13 +51,13 @@ def display_box(name, value):
     draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill=0)
 
     draw.line((left_indent, (31 + top_indent), box_width, (31 + top_indent)), fill=255)
-    draw.line(((50 + left_indent), (31 + top_indent), (50 + left_indent), box_height), fill=255)
+    draw.line(((45 + left_indent), (31 + top_indent), (45 + left_indent), box_height), fill=255)
 
     host_name = socket.gethostname()
 
     draw.text((15, 12), host_name,  font=font, fill=255)
     draw.text((15, 42), name, font=font, fill=255) 
-    draw.text((65, 42), value, font=font, fill=255) 
+    draw.text((62, 42), value, font=font, fill=255) 
 
     # Display image.
     disp.image(image)
