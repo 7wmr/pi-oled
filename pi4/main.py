@@ -76,7 +76,6 @@ while True:
     disp.image(image)
     disp.display()
     time.sleep(.1)
-<<<<<<< HEAD
 
     # PAGE 2
 
@@ -102,7 +101,3 @@ while True:
     disp.display()
     time.sleep(.1)
 
-
-
-=======
->>>>>>> bbe5efaa418298c068ad229cc18dc07f45db1745
