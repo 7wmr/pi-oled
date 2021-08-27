@@ -1,8 +1,8 @@
-name: Deploy Pi OLED
+name: Deploy Pi OLED [k3s-master-1]
 on: [push]
 jobs:
   Deploy-Pi-OLED-Service:
-    runs-on: [self-hosted, k3s]
+    runs-on: [self-hosted, k3s-master-1]
     steps:
       - name: Git Pull
         run: cd /repos/pi-oled/ && git pull

@@ -1,0 +1,12 @@
+name: Deploy Pi OLED [k3s-node-1]
+on: [push]
+jobs:
+  Deploy-Pi-OLED-Service:
+    runs-on: [self-hosted, k3s-node-1]
+    steps:
+      - name: Git Pull
+        run: cd /repos/pi-oled/ && git pull
+      - name: Service Restart
+        run: sudo systemctl restart pi-oled
+      - name: Service Status
+        run: systemctl status pi-oled
