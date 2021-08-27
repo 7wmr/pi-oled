@@ -40,7 +40,7 @@ box_width = 107
 box_height = 62
 
 # Fonts.
-font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 14)
+font = ImageFont.truetype('/repos/pi-oled/fonts/roboto/Roboto-Light.ttf', 14)
 
 indicator_box = True
 
@@ -76,6 +76,7 @@ while True:
     disp.image(image)
     disp.display()
     time.sleep(.1)
+<<<<<<< HEAD
 
     # PAGE 2
 
@@ -103,3 +104,5 @@ while True:
 
 
 
+=======
+>>>>>>> bbe5efaa418298c068ad229cc18dc07f45db1745
