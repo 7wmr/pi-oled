@@ -42,62 +42,49 @@ box_height = 62
 # Fonts.
 font = ImageFont.truetype('/repos/pi-oled/fonts/roboto/Roboto-Light.ttf', 14)
 
-indicator_box = True
 
-while True:
-    
-    # PAGE 1
-
+def display_box(name, value):
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     # Draw box.
     draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill=0)
 
-    # Indicator box.
-    if indicator_box == True:
-        draw.rectangle(((left_indent + 1), (top_indent + 1), (left_indent + 3), (top_indent + 3)), outline=1, fill=1)
-        indicator_box = False
-    else:
-        indicator_box = True
-
     draw.line((left_indent, (31 + top_indent), box_width, (31 + top_indent)), fill=255)
     draw.line(((50 + left_indent), (31 + top_indent), (50 + left_indent), box_height), fill=255)
 
     host_name = socket.gethostname()
-    mem_usage = str(psutil.virtual_memory()[2]) + '%'
-    cpu_usage = str(psutil.cpu_percent(4)) + '%'
 
     draw.text((15, 12), host_name,  font=font, fill=255)
-    draw.text((15, 42), mem_usage, font=font, fill=255) 
-    draw.text((66, 42), cpu_usage, font=font, fill=255) 
+    draw.text((15, 42), name, font=font, fill=255) 
+    draw.text((66, 42), value, font=font, fill=255) 
 
     # Display image.
     disp.image(image)
     disp.display()
     time.sleep(2)
 
-    # PAGE 2
 
-    # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+while True:
+    
+    # Display Memory
+    mem_usage = str(psutil.virtual_memory()[2]) + '%'
 
-    # Draw box.
-    draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill=0)
+    display_box('Memory', mem_usage)
 
-    draw.line((left_indent, (31 + top_indent), box_width, (31 + top_indent)), fill=255)
+    # Display CPU
+    cpu_usage = str(psutil.cpu_percent(4)) + '%'
 
+    display_box('CPU', cpu_usage)
+
+    # Display Temperature
     with open('/sys/class/thermal/thermal_zone0/temp') as f:
         temperature = f.readlines()
     
     temperature = temperature[0].replace('\n', '')
     degrees_c = int(temperature) / 1000
     degrees_c = str(round(degrees_c, 2)) + " ºC"
-    
-    draw.text((30, 12), degrees_c,  font=font, fill=255)
 
-     # Display image.
-    disp.image(image)
-    disp.display()
-    time.sleep(2)
+    display_box('Temp', cpu_usage)
+
 
