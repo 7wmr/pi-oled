@@ -85,6 +85,6 @@ while True:
     degrees_c = int(temperature) / 1000
     degrees_c = str(round(degrees_c, 1)) + "ºC"
 
-    display_box('TEMP', degrees_c)
+    display_box('TMP', degrees_c)
 
 
