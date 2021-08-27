@@ -77,6 +77,11 @@ while True:
 
     display_box('CPU', cpu_usage)
 
+    # Display Disk
+    disk_usage = str(round(psutil.disk_usage('/').percent, 1)) + '%'
+
+    display_box('DSK', disk_usage)
+
     # Display Temperature
     with open('/sys/class/thermal/thermal_zone0/temp') as f:
         temperature = f.readlines()
@@ -86,5 +91,6 @@ while True:
     degrees_c = str(round(degrees_c, 1)) + "ºC"
 
     display_box('TMP', degrees_c)
+
 
 
