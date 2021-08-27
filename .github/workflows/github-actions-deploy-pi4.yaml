@@ -1,7 +1,7 @@
 name: Deploy Pi OLED
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Deploy-Pi-OLED-Service:
     runs-on: [self-hosted, k3s]
     steps:
       - name: Git Pull
