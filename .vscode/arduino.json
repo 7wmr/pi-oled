@@ -1,0 +1,5 @@
+{
+    "sketch": "../M5StickStopwatch/stopwatch/stopwatch.ino",
+    "configuration": "PartitionScheme=default,UploadSpeed=1500000,DebugLevel=info",
+    "board": "esp32:esp32:m5stick-c"
+}

@@ -45,7 +45,9 @@ font = ImageFont.truetype('fonts/roboto/Roboto-Light.ttf', 14)
 indicator_box = True
 
 while True:
-        
+    
+    # PAGE 1
+
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
@@ -74,3 +76,30 @@ while True:
     disp.image(image)
     disp.display()
     time.sleep(.1)
+
+    # PAGE 2
+
+    # Draw a black filled box to clear the image.
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+
+    # Draw box.
+    draw.rectangle((left_indent, top_indent, box_width, box_height), outline=1, fill=0)
+
+    draw.line((left_indent, (31 + top_indent), box_width, (31 + top_indent)), fill=255)
+
+    with open('/sys/class/thermal/thermal_zone0/temp') as f:
+        temperature = f.readlines()
+    
+    temperature = temperature[0].replace('\n', '')
+    degrees_c = int(temperature) / 1000
+    degrees_c = str(round(degrees_c, 2)) + " ºC"
+    
+    draw.text((15, 12), degrees_c,  font=font, fill=255)
+
+     # Display image.
+    disp.image(image)
+    disp.display()
+    time.sleep(.1)
+
+
+
