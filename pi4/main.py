@@ -62,7 +62,7 @@ def display_box(name, value):
     # Display image.
     disp.image(image)
     disp.display()
-    time.sleep(3)
+    time.sleep(2)
 
 
 while True:
@@ -83,7 +83,7 @@ while True:
     
     temperature = temperature[0].replace('\n', '')
     degrees_c = int(temperature) / 1000
-    degrees_c = str(round(degrees_c, 1)) + " ºC"
+    degrees_c = str(round(degrees_c, 1)) + "ºC"
 
     display_box('TEMP', degrees_c)
 
