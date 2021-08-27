@@ -57,7 +57,7 @@ def display_box(name, value):
 
     draw.text((15, 12), host_name,  font=font, fill=255)
     draw.text((15, 42), name, font=font, fill=255) 
-    draw.text((66, 42), value, font=font, fill=255) 
+    draw.text((65, 42), value, font=font, fill=255) 
 
     # Display image.
     disp.image(image)
