@@ -1,0 +1,10 @@
+name: Deploy Pi OLED
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: [self-hosted, k3s]
+    steps:
+      - name: Git Pull
+        run: cd /repos/pi-oled/ && git pull
+      - name: Service Status
+        run: systemctl status pi-oled
