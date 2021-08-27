@@ -6,5 +6,7 @@ jobs:
     steps:
       - name: Git Pull
         run: cd /repos/pi-oled/ && git pull
+      - name: Service Restart
+        run: systemctl restart pi-oled
       - name: Service Status
         run: systemctl status pi-oled
