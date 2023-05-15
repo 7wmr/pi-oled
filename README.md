@@ -10,7 +10,7 @@ sudo apt install -y python3-pip
 sudo apt install -y python3-setuptools
 sudo apt install -y python3-rpi.gpio
 sudo apt install -y i2c-tools
-sudo apt install -y python-smbus
+sudo apt install -y python3-smbus
 ```
 
 ```bash
