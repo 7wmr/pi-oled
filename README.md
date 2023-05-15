@@ -29,6 +29,11 @@ sudo pip3 install Adafruit-SSD1306
 ```
 
 ```bash
+sudo raspi-config
+```
+> Interface Options > I2C > Enabled
+
+```bash
 sudo python3 pi4/main.py
 ```
 
