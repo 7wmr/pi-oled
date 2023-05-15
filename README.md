@@ -18,6 +18,13 @@ sudo pip3 install psutil
 ```
 
 ```bash
+cd /repos
+git clone https://github.com/adafruit/Adafruit_Python_GPIO.git
+cd Adafruit_Python_GPIO
+sudo python setup.py install
+```
+
+```bash
 sudo python3 pi4/main.py
 ```
 
