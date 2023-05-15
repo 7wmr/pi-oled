@@ -25,6 +25,10 @@ sudo python setup.py install
 ```
 
 ```bash
+sudo pip3 install Adafruit-SSD1306
+```
+
+```bash
 sudo python3 pi4/main.py
 ```
 
